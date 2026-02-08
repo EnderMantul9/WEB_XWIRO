@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract data visualization background",
+      "imageUrl": "https://images.unsplash.com/photo-1676565415274-15550cb4b75e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkYXRhJTIwc3RhdGlzdGljc3xlbnwwfHx8fDE3NzA1MTMyODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data statistics"
+    },
+    {
+      "id": "news-1",
+      "description": "Economic survey field work",
+      "imageUrl": "https://images.unsplash.com/photo-1665979738276-e41e815df1e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN1cnZleXxlbnwwfHx8fDE3NzA1MTMyODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business survey"
+    },
+    {
+      "id": "news-2",
+      "description": "Digital technology statistics meeting",
+      "imageUrl": "https://images.unsplash.com/photo-1624555130581-1d9cca783bc0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvZmZpY2UlMjBtZWV0aW5nfGVufDB8fHx8MTc3MDQzOTExMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office meeting"
+    },
+    {
+      "id": "news-3",
+      "description": "City development statistics",
+      "imageUrl": "https://images.unsplash.com/photo-1575380591643-b2c92368dc6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NzA0OTc2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city skyline"
+    },
+    {
+      "id": "indicator-icon",
+      "description": "Statistics icon",
+      "imageUrl": "https://images.unsplash.com/photo-1759724369762-376e0a29478b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGFydCUyMGljb258ZW58MHx8fHwxNzcwNDYzMjMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chart icon"
+    }
+  ]
 }
