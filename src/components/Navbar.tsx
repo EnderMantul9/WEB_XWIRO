@@ -47,7 +47,7 @@ export function Navbar() {
             <Database className="w-6 h-6" />
           </div>
           <div className="flex flex-col leading-tight">
-            <span className="font-bold text-xl tracking-tight">STATISTIKA</span>
+            <span className="font-bold text-xl tracking-tight">KSPS</span>
             <span className={cn(
               "text-[10px] font-semibold tracking-[0.2em] uppercase opacity-80",
               isScrolled ? "text-primary" : "text-white"

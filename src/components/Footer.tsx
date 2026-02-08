@@ -15,7 +15,7 @@ export function Footer() {
                 <Database className="w-6 h-6" />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-bold text-xl tracking-tight">STATISTIKA</span>
+                <span className="font-bold text-xl tracking-tight">KSPS</span>
                 <span className="text-[10px] font-semibold tracking-[0.2em] uppercase opacity-80">TERPERCAYA</span>
               </div>
             </Link>
@@ -86,7 +86,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-white/40 uppercase tracking-widest font-semibold">
-          <p>© 2024 STATISTIKA TERPERCAYA. SELURUH HAK CIPTA DILINDUNGI.</p>
+          <p>© 2024 KSPS TERPERCAYA. SELURUH HAK CIPTA DILINDUNGI.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white">Kebijakan Privasi</Link>
             <Link href="#" className="hover:text-white">Syarat & Ketentuan</Link>

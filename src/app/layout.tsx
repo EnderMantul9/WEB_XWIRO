@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Statistika Terpercaya | Portal Data Statistik Nasional',
+  title: 'KSPS Terpercaya | Portal Data Statistik Nasional',
   description: 'Lembaga independen penyedia data statistik nasional terpercaya untuk kebijakan publik.',
 };
 

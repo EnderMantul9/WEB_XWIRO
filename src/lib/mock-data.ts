@@ -4,7 +4,7 @@ export const STRATEGIC_INDICATORS = [
   { id: 2, title: "Umur Harapan Hidup Perempuan", value: "75.82", unit: "Tahun", period: "2023", trend: "up" },
   { id: 3, title: "Kunjungan Wisman", value: "1.1M", unit: "Orang", period: "Mei 2024", trend: "up" },
   { id: 4, title: "Inflasi (IHPB)", value: "2.12", unit: "%", period: "Mei 2024", trend: "down" },
-  { id: 5, title: "Nilai Tukar Petani", value: "119.39", unit: "Indeks", period: "Juni 2024", trend: "up" },
+  { id: 5, title: "Nilai Tukar Petani", value: "119.39", unit: "Indeks", period: "Juni 2024", trend: "down" },
   { id: 6, title: "Pertumbuhan Ekonomi", value: "5.11", unit: "%", period: "Q1 2024", trend: "up" },
 ];
 
