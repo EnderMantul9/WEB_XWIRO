@@ -2,6 +2,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Calendar, User } from 'lucide-react';
@@ -25,38 +26,40 @@ export function NewsGrid() {
           {NEWS_ITEMS.map((item) => {
             const image = PlaceHolderImages.find(img => img.id === item.imageKey)?.imageUrl;
             return (
-              <Card key={item.id} className="group border-none shadow-none bg-transparent overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-4">
-                    <Image
-                      src={image || ''}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      data-ai-hint="news coverage"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        {item.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <User className="w-3 h-3" />
-                        {item.author}
-                      </span>
+              <Link key={item.id} href={item.href}>
+                <Card className="group border-none shadow-none bg-transparent overflow-hidden cursor-pointer">
+                  <CardContent className="p-0">
+                    <div className="relative h-64 w-full rounded-2xl overflow-hidden mb-4">
+                      <Image
+                        src={image || ''}
+                        alt={item.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-ai-hint="news coverage"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-                    <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      Lembaga terus berupaya meningkatkan kualitas data nasional melalui berbagai kolaborasi strategis dengan berbagai pihak berkepentingan.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {item.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <User className="w-3 h-3" />
+                          {item.author}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-800 leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground line-clamp-2">
+                        Lembaga terus berupaya meningkatkan kualitas data nasional melalui berbagai kolaborasi strategis dengan berbagai pihak berkepentingan.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>

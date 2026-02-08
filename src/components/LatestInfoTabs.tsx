@@ -1,6 +1,7 @@
 
 "use client";
 
+import Link from 'next/link';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Table as TableIcon, BookOpen, BarChart3, ChevronRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,26 +42,28 @@ export function LatestInfoTabs() {
             {Object.entries(LATEST_RELEASES).map(([key, items]) => (
               <TabsContent key={key} value={key} className="mt-0">
                 <div className="divide-y divide-slate-100">
-                  {items.map((item) => (
-                    <div key={item.id} className="p-4 sm:p-6 group hover:bg-slate-50 transition-colors cursor-pointer flex items-center justify-between gap-4">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
-                          <span className="text-[10px] font-bold text-primary px-2 py-0.5 bg-primary/10 rounded uppercase tracking-wider">
-                            {item.category}
-                          </span>
-                          <span className="text-xs text-muted-foreground flex items-center gap-1">
-                            <Calendar className="w-3 h-3" />
-                            {item.date}
-                          </span>
+                  {items.map((item: any) => (
+                    <Link key={item.id} href={item.href || '#'}>
+                      <div className="p-4 sm:p-6 group hover:bg-slate-50 transition-colors cursor-pointer flex items-center justify-between gap-4">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-[10px] font-bold text-primary px-2 py-0.5 bg-primary/10 rounded uppercase tracking-wider">
+                              {item.category}
+                            </span>
+                            <span className="text-xs text-muted-foreground flex items-center gap-1">
+                              <Calendar className="w-3 h-3" />
+                              {item.date}
+                            </span>
+                          </div>
+                          <h3 className="font-semibold text-slate-900 group-hover:text-primary transition-colors">
+                            {item.title}
+                          </h3>
                         </div>
-                        <h3 className="font-semibold text-slate-900 group-hover:text-primary transition-colors">
-                          {item.title}
-                        </h3>
+                        <div className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all">
+                          <ChevronRight className="w-5 h-5" />
+                        </div>
                       </div>
-                      <div className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all">
-                        <ChevronRight className="w-5 h-5" />
-                      </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
                 <div className="p-4 bg-slate-50 border-t flex justify-center">
