@@ -3,31 +3,7 @@
 
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, LineChart, Pie, PieChart, Cell } from "recharts";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-
-const gdpData = [
-  { year: "2019", value: 5.02 },
-  { year: "2020", value: -2.07 },
-  { year: "2021", value: 3.69 },
-  { year: "2022", value: 5.31 },
-  { year: "2023", value: 5.05 },
-];
-
-const inflationData = [
-  { month: "Jan", value: 2.57 },
-  { month: "Feb", value: 2.75 },
-  { month: "Mar", value: 3.05 },
-  { month: "Apr", value: 3.00 },
-  { month: "Mei", value: 2.84 },
-];
-
-const sectorData = [
-  { name: "Industri", value: 18.67 },
-  { name: "Pertanian", value: 12.53 },
-  { name: "Perdagangan", value: 12.94 },
-  { name: "Konstruksi", value: 9.92 },
-  { name: "Lainnya", value: 45.94 },
-];
+import { GDP_GROWTH_DATA, INFLATION_DATA, SECTOR_CONTRIBUTION_DATA } from "@/lib/mock-data";
 
 const COLORS = ['#1A3E66', '#336699', '#4D80B3', '#6699CC', '#80B3E6'];
 
@@ -49,7 +25,7 @@ export function StatsCharts() {
             <CardContent>
               <div className="h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={gdpData}>
+                  <BarChart data={GDP_GROWTH_DATA}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="year" />
                     <YAxis />
@@ -71,7 +47,7 @@ export function StatsCharts() {
             <CardContent>
               <div className="h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
-                  <LineChart data={inflationData}>
+                  <LineChart data={INFLATION_DATA}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis dataKey="month" />
                     <YAxis domain={[0, 4]} />
@@ -93,7 +69,7 @@ export function StatsCharts() {
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
-                      data={sectorData}
+                      data={SECTOR_CONTRIBUTION_DATA}
                       cx="50%"
                       cy="50%"
                       innerRadius={60}
@@ -101,7 +77,7 @@ export function StatsCharts() {
                       paddingAngle={5}
                       dataKey="value"
                     >
-                      {sectorData.map((entry, index) => (
+                      {SECTOR_CONTRIBUTION_DATA.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Pie>
@@ -110,7 +86,7 @@ export function StatsCharts() {
                 </ResponsiveContainer>
               </div>
               <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
-                {sectorData.map((item, index) => (
+                {SECTOR_CONTRIBUTION_DATA.map((item, index) => (
                   <div key={item.name} className="flex items-center gap-3">
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
                     <div>

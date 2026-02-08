@@ -3,24 +3,13 @@
 
 import { Users, Landmark, Trees, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { STATISTICS_SUBJECTS } from '@/lib/mock-data';
 
-const subjects = [
-  {
-    title: "Statistik Sosial",
-    icon: <Users className="w-8 h-8" />,
-    items: ["Kependudukan", "Gender", "Kemiskinan", "Pendidikan", "Kesehatan", "Upah Buruh"]
-  },
-  {
-    title: "Statistik Ekonomi",
-    icon: <Landmark className="w-8 h-8" />,
-    items: ["Ekspor-Impor", "Energi", "Harga Eceran", "Keuangan", "Neraca Wilayah", "Pariwisata"]
-  },
-  {
-    title: "Statistik Lingkungan",
-    icon: <Trees className="w-8 h-8" />,
-    items: ["Geografi", "Iklim", "Lingkungan Hidup", "Potensi Desa", "Pertanian", "Kehutanan"]
-  }
-];
+const ICON_MAP = {
+  Users: <Users className="w-8 h-8" />,
+  Landmark: <Landmark className="w-8 h-8" />,
+  Trees: <Trees className="w-8 h-8" />,
+};
 
 export function SubjectStatistics() {
   return (
@@ -34,10 +23,10 @@ export function SubjectStatistics() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {subjects.map((subject) => (
+          {STATISTICS_SUBJECTS.map((subject) => (
             <div key={subject.title} className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all group">
               <div className="text-white mb-6 bg-white/20 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                {subject.icon}
+                {ICON_MAP[subject.iconName as keyof typeof ICON_MAP]}
               </div>
               <h3 className="text-2xl font-bold text-white mb-6">{subject.title}</h3>
               <ul className="grid grid-cols-1 gap-3">

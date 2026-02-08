@@ -4,29 +4,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText, Table as TableIcon, BookOpen, BarChart3, ChevronRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const releases = {
-  news: [
-    { id: 1, title: "Ekspor Indonesia April 2024 mencapai US$19,62 miliar", date: "15 Mei 2024", category: "Perdagangan" },
-    { id: 2, title: "Tingkat Pengangguran Terbuka (TPT) turun menjadi 4,82 persen", date: "10 Mei 2024", category: "Ketenagakerjaan" },
-    { id: 3, title: "Indeks Harga Konsumen mengalami deflasi 0,03 persen pada Mei 2024", date: "01 Juni 2024", category: "Inflasi" },
-    { id: 4, title: "Produksi Padi 2023 diperkirakan mencapai 53,98 juta ton GKG", date: "05 April 2024", category: "Pertanian" },
-  ],
-  tables: [
-    { id: 1, title: "[Seri 2010] PDB Harga Berlaku Menurut Lapangan Usaha (Miliar Rupiah)", date: "20 Mei 2024", category: "Ekonomi" },
-    { id: 2, title: "Jumlah Penduduk Menurut Kelompok Umur dan Jenis Kelamin", date: "12 Mar 2024", category: "Kependudukan" },
-    { id: 3, title: "Indeks Pembangunan Manusia (IPM) Menurut Provinsi", date: "05 Jan 2024", category: "Sosial" },
-  ],
-  publications: [
-    { id: 1, title: "Statistik Indonesia 2024", date: "28 Feb 2024", category: "Tahunan" },
-    { id: 2, title: "Keadaan Ketenagakerjaan Indonesia Februari 2024", date: "08 Mei 2024", category: "Tematik" },
-    { id: 3, title: "Laporan Perekonomian Indonesia 2023", date: "15 Apr 2024", category: "Ekonomi" },
-  ],
-  infographics: [
-    { id: 1, title: "Profil Kemiskinan di Indonesia September 2023", date: "15 Jan 2024", category: "Sosial" },
-    { id: 2, title: "Perkembangan Pariwisata dan Transportasi Nasional", date: "02 Mei 2024", category: "Sektoral" },
-  ]
-};
+import { LATEST_RELEASES } from "@/lib/mock-data";
 
 export function LatestInfoTabs() {
   return (
@@ -60,7 +38,7 @@ export function LatestInfoTabs() {
           </TabsList>
 
           <div className="bg-white rounded-2xl shadow-sm border p-2">
-            {Object.entries(releases).map(([key, items]) => (
+            {Object.entries(LATEST_RELEASES).map(([key, items]) => (
               <TabsContent key={key} value={key} className="mt-0">
                 <div className="divide-y divide-slate-100">
                   {items.map((item) => (
