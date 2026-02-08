@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Search, Menu, X, Database } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
 
 const navItems = [
   { name: 'Beranda', href: '/' },
@@ -18,6 +19,7 @@ const navItems = [
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,6 +73,7 @@ export function Navbar() {
             variant={isScrolled ? "outline" : "secondary"} 
             size="sm"
             className="flex items-center gap-2"
+            onClick={() => router.push('/search')}
           >
             <Search className="w-4 h-4" />
             Cari
@@ -100,6 +103,17 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Button 
+              variant="outline" 
+              className="w-full justify-start gap-2"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                router.push('/search');
+              }}
+            >
+              <Search className="w-4 h-4" />
+              Cari Data
+            </Button>
           </div>
         </div>
       )}

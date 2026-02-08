@@ -62,7 +62,7 @@ export const NEWS_ITEMS = [
     date: "12 Juni 2024",
     author: "Humas Pusat",
     imageKey: 'news-1',
-    href: '/news/workshop-nasional'
+    href: 'youtube.com'
   },
   {
     id: 2,
@@ -70,7 +70,7 @@ export const NEWS_ITEMS = [
     date: "05 Juni 2024",
     author: "Tim Analisis",
     imageKey: 'news-2',
-    href: '/news/pertumbuhan-ekonomi'
+    href: 'https://www.bps.go.id/id'
   },
   {
     id: 3,
