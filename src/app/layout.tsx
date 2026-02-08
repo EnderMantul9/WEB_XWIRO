@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'KSPS Terpercaya | Portal Data Statistik Nasional',
+  title: 'KSPS | Kaliwiro Scientific Population System',
   description: 'Lembaga independen penyedia data statistik nasional terpercaya untuk kebijakan publik.',
 };
 

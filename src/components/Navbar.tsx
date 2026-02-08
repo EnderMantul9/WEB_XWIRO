@@ -49,9 +49,9 @@ export function Navbar() {
           <div className="flex flex-col leading-tight">
             <span className="font-bold text-xl tracking-tight">KSPS</span>
             <span className={cn(
-              "text-[10px] font-semibold tracking-[0.2em] uppercase opacity-80",
+              "text-[10px] font-semibold tracking-[0.1em] uppercase opacity-80",
               isScrolled ? "text-primary" : "text-white"
-            )}>TERPERCAYA</span>
+            )}>Kaliwiro Scientific Population System</span>
           </div>
         </Link>
 
