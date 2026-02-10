@@ -20,7 +20,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
-              Lembaga pemerintah non-kementerian yang bertanggung jawab langsung kepada Presiden. Bertugas menyediakan data statistik yang berkualitas bagi publik.
+              Lembaga Kependudukan Daerah Xwiro Aseli no Fake. Bertugas untuk menyediakan data statistik terupdate
             </p>
             <div className="flex gap-4">
               <Link href="#" className="p-2 bg-white/10 rounded-full hover:bg-secondary hover:text-primary transition-all">
