@@ -70,7 +70,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-1" />
                 <span className="text-sm text-white/60">
-                  Jl. Dr. Sutomo No. 6-8, Jakarta 10710, Indonesia
+                  Jl. Jogonegoro Km 2 Wonosobo
                 </span>
               </li>
               <li className="flex items-center gap-3">
