@@ -1,11 +1,11 @@
 
 export const STRATEGIC_INDICATORS = [
-  { id: 1, title: "Umur Harapan Hidup Laki-laki", value: "71.75", unit: "Tahun", period: "2023", trend: "up" },
-  { id: 2, title: "Umur Harapan Hidup Perempuan", value: "75.82", unit: "Tahun", period: "2023", trend: "up" },
-  { id: 3, title: "Kunjungan Wisman", value: "1.1M", unit: "Orang", period: "Mei 2024", trend: "up" },
-  { id: 4, title: "Inflasi (IHPB)", value: "2.12", unit: "%", period: "Mei 2024", trend: "down" },
-  { id: 5, title: "Nilai Tukar Petani", value: "119.39", unit: "Indeks", period: "Juni 2024", trend: "down" },
-  { id: 6, title: "Pertumbuhan Ekonomi", value: "5.11", unit: "%", period: "Q1 2024", trend: "up" },
+  { id: 1, title: "Jumlah Penduduk", value: "56.564", unit: "Jiwa", period: "2024", trend: "up" },
+  { id: 2, title: "Laju Kependudukan", value: "1.60", unit: "%", period: "2010-2020", trend: "up" },
+  { id: 3, title: "Jumlah Penduduk Laki-laki ", value: "28.589", unit: "Jiwa", period: "2024", trend: "up" },
+  { id: 4, title: "Jumlah Penduduk Perempuan", value: "27.975", unit: "Jiwa", period: "2024", trend: "up" },
+  { id: 5, title: "Kepadatan penduduk / Km^2", value: "558", unit: "Jiwa", period: "2024", trend: "up" },
+  { id: 6, title: "Jumlah Pencari Kerja", value: "228", unit: "Jiwa", period: "2024", trend: "up" },
 ];
 
 export const LATEST_RELEASES = {
